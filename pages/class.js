@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const tutorials = () => {
+const classMeeting = () => {
   return (
-    <Layout>tutorials</Layout>
+    <Layout>class</Layout>
     
   )
 }
 
-export default tutorials
+export default classMeeting

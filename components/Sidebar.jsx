@@ -14,9 +14,9 @@ import {
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Manage Posts", icon: ArticleIcon, link: "/posts" },
+  { id: 2, label: "Mentee", icon: ArticleIcon, link: "/posts" },
   { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
+  { id: 4, label: "Class", icon: UsersIcon, link: "/class" },
 ];
 
 const Sidebar = () => {
@@ -78,7 +78,7 @@ const Sidebar = () => {
                 hidden: toggleCollapse,
               })}
             >
-              Logo
+              Dashboard
             </span>
           </div>
           {isCollapsible && (
