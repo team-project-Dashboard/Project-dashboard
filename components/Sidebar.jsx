@@ -14,9 +14,9 @@ import {
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Mentee", icon: ArticleIcon, link: "/posts" },
+  { id: 2, label: "Mentee", icon: UsersIcon, link: "/mentee" },
   { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Class", icon: UsersIcon, link: "/class" },
+  { id: 4, label: "Class", icon: ArticleIcon, link: "/class" },
 ];
 
 const Sidebar = () => {

@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 const mentee = () => {
   return (
-    <Layout>posts</Layout>
+    <Layout>mentee</Layout>
   )
 }
 
