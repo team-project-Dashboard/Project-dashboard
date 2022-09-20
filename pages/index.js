@@ -1,5 +1,18 @@
-import Layout from "../components/Layout";
+import { Main } from "next/document";
+import Layoutindex from "../components/Layoutindex";
+
 
 export default function Home() {
-  return <Layout>Home</Layout>;
+  return <Layoutindex>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center text-gray-500">
+    <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
+    <div className="tulisan w-3/5 p-5"><p>Sign in Section</p></div>
+    <div className="w-2/5 "><p>Sign up section</p></div>
+    </div>
+    </div>
+    
+    </div>
+  
+    </Layoutindex>;
 }

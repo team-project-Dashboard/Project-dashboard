@@ -1,18 +1,15 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 
-const Layout = ({ children }) => {
+const Layoutindex = ({ children }) => {
   return (
     <div className="h-screen flex flex-row justify-start">
       <Sidebar />
-      <div className="bg-primary flex-1 p-4 text-dark ">
-        <div className="bg-dark">
+      <div className="bg-primary flex-1 p-4 text-dark">
           {children}
-          
         </div>
       </div>
-    </div>
   );
 };
 
-export default Layout;
+export default Layoutindex;
