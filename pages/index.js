@@ -2,6 +2,7 @@
 import Layoutindex from "../components/Layoutindex";
 import {FaFacebookF, FaLinkedinIn, FaGoogle, FaEnvelope,} from "react-icons/fa";
 import { HiLockClosed } from "react-icons/hi";
+
 export default function Home() {
   return <Layoutindex>
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -41,7 +42,7 @@ export default function Home() {
               <input type="checkbox" name="remember" className="mr-1"/>remember me?
             </label>
           </div>
-          <a href="#" className="border-2 bg-[#fafafa] rounded-full px-12 py-2 inline-block font-ssemibold hover:bg-[#0ea5e9] hover:text-[#fafafa]">Login</a>
+          <a href="/dashboard" className="border-2 bg-[#fafafa] rounded-full px-12 py-2 inline-block font-ssemibold hover:bg-[#0ea5e9] hover:text-[#fafafa]">Login</a>
         </div>
         </div>
     </div>
@@ -52,8 +53,7 @@ export default function Home() {
     </div>
     </div>
     </div>
-    
     </div>
   
     </Layoutindex>;
-}
+ };
