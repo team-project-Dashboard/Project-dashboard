@@ -1,59 +1,94 @@
+import React, { useState } from 'react';
+import { Form, Button, Col, ListGroup } from 'react-bootstrap';
+import Router, { useRouter } from 'next/router';
+import Navigation from './component/navigation';
 
-import Layoutindex from "../components/Layoutindex";
-import {FaFacebookF, FaLinkedinIn, FaGoogle, FaEnvelope,} from "react-icons/fa";
-import { HiLockClosed } from "react-icons/hi";
+const Index = () => {
+  const router = useRouter();
 
-export default function Home() {
-  return <Layoutindex>
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-    <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center text-gray-500">
-    <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
-    <div className=" w-3/5 p-5">
-      <div className="text-left font-bold">
-        <span className="text-[#2563eb]">Dashboard</span>App
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const goHome = () => {
+    Router.push({
+      pathname: '/dasboard/home',
+      query: {
+        username : `[ ${username} ]`,
+        email: email,
+        password: password,
+      },
+    });
+  };
+
+  return (
+    <div style={{ minHeight: '80vh' }}>
+      <Navigation />
+
+      <div className="d-flex">
+        <div className="col-md-3 col-sm-12" style={{ height: '100vh', color: 'white', backgroundColor: '#0275d8' }}>
+          <div className="text-center mt-5 mb-5">
+            <h1>LOGO</h1>
+          </div>
+          <hr style={{ width: '100%', border: '5px solid' }} />
+          <div className="mt-4">
+            <ListGroup variant="flush" className="list-custom">
+              <a href="#">
+                <ListGroup.Item>Dashboard</ListGroup.Item>
+              </a>
+              <a href="#">
+                <ListGroup.Item>User</ListGroup.Item>
+              </a>
+              <a href="#">
+                <ListGroup.Item>Mentee</ListGroup.Item>
+              </a>
+              <a href="#">
+                <ListGroup.Item>Class</ListGroup.Item>
+              </a>
+            </ListGroup>
+          </div>
+        </div>
+
+        <div className="col-md-9 col-sm-12">
+          <h1 className="text-center mt-5">LOGIN PAGE</h1>
+
+          <div>
+            <div className="d-flex justify-content-center">
+              <div className="mt-5" style={{ width: '45%', height: '60vh', backgroundColor: '#DCDCDC', borderRadius: '15px' }}>
+                <div className="d-flex justify-content-center mt-5">
+                  <Form style={{ width: '65%' }}>
+                    <Form.Group className="mb-2" controlId="formBasicEmail">
+                      <Form.Label>Username</Form.Label>
+                      <Form.Control type="text" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)} />
+                    </Form.Group>
+
+                    <Form.Group className="mb-2" controlId="formBasicEmail">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
+                      <Col className="d-flex justify-content-end me-2">
+                        <a href="#" style={{ textDecoration: 'none' }}>
+                          <Form.Text>Forgot Password ?</Form.Text>
+                        </a>
+                      </Col>
+                    </Form.Group>
+
+                    <Button className="w-100" variant="primary" onClick={() => goHome()}>
+                      Login
+                    </Button>
+                  </Form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="py-10">
-        <h2 className="text-3xl font-bold text-[#1d4ed8]">Sign in to Access
-        </h2>
-        <div className="border-2 w-10 bg-[#6b21a8] inline-block"></div>
-        <div className="flex justify-center my-2">
-          <a href="#" className="border-2 border-[#4b5563] rounded-full p-3 mx-1">
-            <FaFacebookF className="text-sm" />
-          </a>
-          <a href="#" className="border-2 border-[#4b5563] rounded-full p-3 mx-1">
-            <FaLinkedinIn className="text-sm" />
-          </a>
-          <a href="#" className="border-2 border-[#4b5563] rounded-full p-3 mx-1">
-            <FaGoogle className="text-sm" />
-          </a>
-        </div>
-        <p className="text-[#737373] my-3">use ID account</p>
-        <div className="flex flex-col items-center">
-          <div className="bg-[#6b7280] w-64 p-2 flex items-center mb-3 rounded-xl">
-            <FaEnvelope className="text-[#fafafa] m-2"  />
-          <input type="email" name="email" placeholder="email" className="bg-[#6b7280] outline-none text-sm flex-1" />
-          </div>
-          <div className="bg-[#6b7280] w-64 p-2 flex items-center mb-3 rounded-xl">
-            <HiLockClosed className="text-[#fafafa] m-2"  />
-          <input type="password" name="password" placeholder="password" className="bg-[#6b7280] outline-none text-sm flex-1" />
-          </div>
-          <div className="flex w-64 mb-5">
-            <label className="flex items-center text-xs">
-              <input type="checkbox" name="remember" className="mr-1"/>remember me?
-            </label>
-          </div>
-          <a href="/dashboard" className="border-2 bg-[#fafafa] rounded-full px-12 py-2 inline-block font-ssemibold hover:bg-[#0ea5e9] hover:text-[#fafafa]">Login</a>
-        </div>
-        </div>
     </div>
-    <div className="w-2/5 bg-[#1d4ed8] rounded-tr-2xl rounded-br-2xl py-36 px-12">
-      <h2 className="text-3xl font-bold mb-2 text-[#fafafa]">Welcome..!!</h2>
-      <div className="border-2 border-[#fafafa] w-10 bg-[#fafafa] inline-block"></div>
-      <p className="text-[#fafafa] mb-2">student data management app</p>
-    </div>
-    </div>
-    </div>
-    </div>
-  
-    </Layoutindex>;
- };
+  );
+};
+
+export default Index;

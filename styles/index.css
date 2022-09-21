@@ -1,0 +1,26 @@
+.list-custom a {
+  text-decoration: none;
+}
+.list-group-item {
+  background-color: #0275d8;
+  border-top: white;
+  border-bottom: 1px solid white;
+  color: white;
+  height: 60px;
+}
+.list-group-item:hover {
+  background-color: white;
+  color: #0275d8;
+  font-weight: bold;
+  border-right: none;
+  border-left: none;
+}
+.list-group-item.active {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid white;
+}
+
