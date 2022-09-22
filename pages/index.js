@@ -2,18 +2,22 @@
 import Layoutindex from "../components/Layoutindex";
 import {FaFacebookF, FaLinkedinIn, FaGoogle, FaEnvelope,} from "react-icons/fa";
 import { HiLockClosed } from "react-icons/hi";
+import Button from 'react-bootstrap/Button';
+
 
 export default function Home() {
-  return <Layoutindex>
+
+  return (
+    <div className="bg-[#354551]">
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
     <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center text-gray-500">
     <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
     <div className=" w-3/5 p-5">
       <div className="text-left font-bold">
-        <span className="text-[#2563eb]">Dashboard</span>App
+        <span className="text-[#1C4C74]">Dashboard</span>App
       </div>
       <div className="py-10">
-        <h2 className="text-3xl font-bold text-[#1d4ed8]">Sign in to Access
+        <h2 className="text-3xl font-bold text-[#1C4C74]">Sign in to Access
         </h2>
         <div className="border-2 w-10 bg-[#6b21a8] inline-block"></div>
         <div className="flex justify-center my-2">
@@ -46,7 +50,7 @@ export default function Home() {
         </div>
         </div>
     </div>
-    <div className="w-2/5 bg-[#1d4ed8] rounded-tr-2xl rounded-br-2xl py-36 px-12">
+    <div className="w-2/5 bg-[#1C4C74] rounded-tr-2xl rounded-br-2xl py-36 px-12">
       <h2 className="text-3xl font-bold mb-2 text-[#fafafa]">Welcome..!!</h2>
       <div className="border-2 border-[#fafafa] w-10 bg-[#fafafa] inline-block"></div>
       <p className="text-[#fafafa] mb-2">student data management app</p>
@@ -54,6 +58,6 @@ export default function Home() {
     </div>
     </div>
     </div>
-  
-    </Layoutindex>;
+    </div>
+  )
  };
