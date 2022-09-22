@@ -6,10 +6,7 @@ const Layout = ({ children }) => {
     <div className="h-screen flex flex-row justify-start">
       <Sidebar />
       <div className="bg-primary flex-1 p-4 text-dark ">
-        <div className="bg-dark">
-          {children}
-          
-        </div>
+        <div className="bg-dark">{children}</div>
       </div>
     </div>
   );
