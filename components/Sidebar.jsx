@@ -17,7 +17,7 @@ const menuItems = [
   { id: 2, label: "Mentee", icon: UsersIcon, link: "/mentee" },
   { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
   { id: 4, label: "Class", icon: ArticleIcon, link: "/class" },
-  { id: 5, label: "dashboard", icon: ArticleIcon , link: "/dashboard"}
+  { id: 5, label: "dashboard", icon: ArticleIcon , link: "/dashboard"},
 ];
 
 const Sidebar = () => {

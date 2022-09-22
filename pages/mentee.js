@@ -3,7 +3,9 @@ import Layout from '../components/Layout'
 
 const mentee = () => {
   return (
-    <Layout>mentee</Layout>
+    <Layout>
+    <div>hello world</div>
+      </Layout>
   )
 }
 
