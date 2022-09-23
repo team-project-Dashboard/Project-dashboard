@@ -69,7 +69,7 @@ export default function Home() {
                     </label>
                   </div>
                   <a
-                    href="/dashboard"
+                    href="/users"
                     className="border-2 bg-[#fafafa] rounded-full px-12 py-2 inline-block font-ssemibold hover:bg-[#0ea5e9] hover:text-[#fafafa]"
                   >
                     Login

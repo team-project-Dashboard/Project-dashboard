@@ -36,9 +36,7 @@ const data = [
 
 
 export default function Dashboard (){
-  const Dynamic = dynamic(() =>
-  import("../Dynamic").then((res) => console.log(res))
-);
+
   return (
     
     <Layoutindex>
