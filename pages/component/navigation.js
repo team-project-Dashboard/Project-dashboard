@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 const Navigation = ({ userAccount }) => {
   return (
     <div>
-      <Navbar bg="dark" variant="dark" /*style={{ backgroundColor: '#000080', color: '#F5FFFA' }}*/>
+      <Navbar className="nav-custom" variant="dark" /* bg="dark" variant="dark" style={{ backgroundColor: '#000080', color: '#F5FFFA' }}*/>
         <Container>
           <div>
             <Navbar.Brand href="#home">Dashboard App</Navbar.Brand>
