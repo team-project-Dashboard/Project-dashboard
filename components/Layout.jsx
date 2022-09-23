@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="h-screen flex flex-row justify-start">
+    <div className="h-full flex flex-row justify-start">
 
       <Sidebar />
       <div className="bg-[#6CB4E4] flex-1 p-4 text-dark ">

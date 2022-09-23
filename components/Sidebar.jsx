@@ -14,10 +14,11 @@ import {
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Mentee", icon: UsersIcon, link: "/mentee" },
-  { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Class", icon: ArticleIcon, link: "/class" },
-  { id: 5, label: "dashboard", icon: ArticleIcon , link: "/dashboard"},
+  { id: 2, label: "dashboard", icon: ArticleIcon , link: "/dashboard"},
+  { id: 3, label: "Mentee", icon: UsersIcon, link: "/mentee" },
+  { id: 4, label: "addmente", icon: UsersIcon , link: "/addmente"},
+  { id: 5, label: "Manage Users", icon: UsersIcon, link: "/users" },
+  { id: 6, label: "Class", icon: ArticleIcon, link: "/class" },
 ];
 
 const Sidebar = () => {
