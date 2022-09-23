@@ -5,7 +5,7 @@ import NewForm from "../components/NewForm";
 import Layout from "../components/Layout";
 
 const users = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const handler = () => {
     setVisible(visible ? false : true);
@@ -13,10 +13,10 @@ const users = () => {
 
   return (
     <Layout>
-      <div className="pb-5">
-        <h2 className="text-xl md:text-5xl text-left font-bold py-10">
+      <div className="pb-2">
+        <h4 className="text-xl md:text-5xl text-left font-bold">
           Immersive Dashboard
-        </h2>
+        </h4>
         <h2 className="text-md md:text-2xl text-left pb-3">User List</h2>
         <div className="container mx-autoflex justify-between py-5 border-b">
           <div className="left gap-3">
